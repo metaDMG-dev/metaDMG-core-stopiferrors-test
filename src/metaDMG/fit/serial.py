@@ -146,6 +146,7 @@ def get_damage_command(config: Config) -> str:
         f"--runmode {runmode} "
         f"--outname {outname} "
         f"{config['bam']} "
+        f"--stopIfErrors {config['stopIfErrors']} "
     )
     return command[:-1]
 
