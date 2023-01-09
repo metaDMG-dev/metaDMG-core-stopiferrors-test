@@ -283,7 +283,7 @@ def create_config(
         sample_suffix=sample_suffix,
         long_name=long_name,
         damage_mode=damage_mode,
-        stopIfErrors=stopIfErrors,
+        #stopIfErrors=stopIfErrors,
         __version__=__version__,
     )
 
