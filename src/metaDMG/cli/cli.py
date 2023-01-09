@@ -132,6 +132,13 @@ def create_config(
         rich_help_panel="LCA parameters",
     ),
     # GENERAL PARAMETERS
+    stopIfErrors: int = typer.Option(
+         0,
+        "--stopIfErrors",
+        "-Z",
+        help="Temporary hack to bypass sorting check if SO tag does not exist in sam header. Values 0 or 1. zero=dont check",
+        rich_help_panel="General parameters",
+    ),
     metaDMG_cpp: str = typer.Option(
         "./metaDMG-cpp",
         "--metaDMG-cpp",
@@ -276,6 +283,7 @@ def create_config(
         sample_suffix=sample_suffix,
         long_name=long_name,
         damage_mode=damage_mode,
+        stopIfErrors=stopIfErrors,
         __version__=__version__,
     )
 
